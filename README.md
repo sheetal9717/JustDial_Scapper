@@ -1,7 +1,7 @@
 # JustDial_Scapper
 This is a data scraper based on BeautifulSoup and Selenium frameworks suitable for dynamic scraping. This scraper is suitable for the site which has lazy loading features such as data loads and populates on user scrolling. It will extract all the data until the scroll is complete and save it as a JSON file.
  <br>    
-Installation:  
+**Installation:**  
 Install Python3  
 Install BeautifulSoup  
 Install Selenium  
