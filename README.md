@@ -3,8 +3,9 @@ This is a data scraper based on BeautifulSoup and Selenium frameworks suitable f
  <br>    
 Installation:  
 Install Python3  
-Install Selenium.  
-Install webdriver that support your browser.<br>
+Install BeautifulSoup  
+Install Selenium  
+Install webdriver that support your browser<br>
 
 Run the file :
 >python3 -W ignore justdial.py
