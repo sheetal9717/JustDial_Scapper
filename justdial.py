@@ -10,7 +10,7 @@ from bs4 import BeautifulSoup
 import json
 import time
 from selenium import webdriver
-browser = webdriver.Chrome('/home/sheetal/Downloads/chromedriver_linux64/chromedriver')
+browser = webdriver.Chrome('/home/sheetal/Downloads/chromedriver_linux64/chromedriver')# update path based on your directory
 dict_list = []
 def get_soup(link):
     browser.get(link)
@@ -40,12 +40,9 @@ def get_soup(link):
             dict_service['Address'] = location
         dict_list.append(dict_service)
     json_object = json.dumps(dict_list, indent = 4)
-    with open("/home/sheetal/using_selenium/data.json", "w") as outfile: 
+    with open("/home/sheetal/using_selenium/data.json", "w") as outfile: # update path based on your directory
         outfile.write(json_object)
     
-
-def innerHTML(element):
-    return element.decode_contents(formatter="html")
 
 def get_name(body):
 	return body.find('span', {'class':'jcn'}).a.string
@@ -105,10 +102,6 @@ def get_rating(body):
 
 	return rating
 
-def get_rating_count(body):
-	text = body.find('span', {'class':'rt_count'}).string
-	rating_count =''.join(i for i in text if i.isdigit())
-	return rating_count
 
 def get_address(body):
 	return body.find('span', {'class':'mrehover'}).text.strip()
